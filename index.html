@@ -9,7 +9,8 @@
     <script>
       function computerPlay() {
         const options = ["Rock", "Paper", "Scissors"];
-        const index = Math.random() * options.length;
+        const index = Math.floor(Math.random() * options.length);
+        console.log(options[index]);
         return options[index];
       }
     </script>
