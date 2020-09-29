@@ -7,12 +7,27 @@
   </head>
   <body>
     <script>
+      const options = ["Rock", "Paper", "Scissors"];
       function computerPlay() {
-        const options = ["Rock", "Paper", "Scissors"];
         const index = Math.floor(Math.random() * options.length);
         console.log(options[index]);
         return options[index];
       }
+
+      function playRound(playerSelection, computerSelection) {
+        if (playerSelection == computerSelection) {
+          return `Its a Draw!, you both picked ${options[playerSelection]}`;
+        } else if ((playerSelection + 1) % 3 == computerSelection) {
+          return `You Lose! ${options[computerSelection]} beats ${options[playerSelection]}`;
+        } else {
+          return `You Win! ${options[playerSelection]} beats ${options[computerSelection]}`;
+        }
+      }
+
+      let getIndex = function (rps) {
+        const optionsLowercase = options.map((w) => w.toLowerCase());
+        return optionsLowercase.indexOf(rps.toLowerCase());
+      };
     </script>
   </body>
 </html>
