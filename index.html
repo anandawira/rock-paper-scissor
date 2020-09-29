@@ -19,8 +19,16 @@
         <button data-key="1" class="key">Paper</button>
         <button data-key="2" class="key">Scissors</button>
       </div>
-      <p>Computer's pick :</p>
-      <p id="pick">None</p>
+      <div id="picks">
+        <div>
+          <p>Your pick :</p>
+          <p id="playerPick">None</p>
+        </div>
+        <div>
+          <p>Computer's pick :</p>
+          <p id="computerPick">None</p>
+        </div>
+      </div>
     </main>
     <script>
       const buttons = Array.from(document.querySelectorAll(".key"));
@@ -35,8 +43,12 @@
         h1Elem.textContent = result;
 
         const optionsString = ["Rock", "Paper", "Scissors"];
-        const pElem = document.querySelector("#pick");
-        pElem.textContent = optionsString[computerSelection];
+
+        const comElem = document.querySelector("#computerPick");
+        comElem.textContent = optionsString[computerSelection];
+
+        const playerElem = document.querySelector("#playerPick");
+        playerElem.textContent = optionsString[playerSelection];
       }
     </script>
   </body>

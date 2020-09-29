@@ -6,7 +6,7 @@ function computerPlay() {
 
 function playRound(playerSelectionIndex, computerSelectionIndex) {
   if (playerSelectionIndex == computerSelectionIndex) {
-    return `Its a Draw!, you both picked ${options[playerSelectionIndex]}`;
+    return `Its a Draw! you both picked ${options[playerSelectionIndex]}`;
   } else if ((playerSelectionIndex + 1) % 3 == computerSelectionIndex) {
     return `You Lose! ${options[computerSelectionIndex]} beats ${options[playerSelectionIndex]}`;
   } else {

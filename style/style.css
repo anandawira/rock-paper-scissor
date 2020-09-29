@@ -12,7 +12,7 @@ h1 {
 
 #options {
   display: flex;
-  padding: 50px;
+  padding: 80px;
 }
 
 #options button {
@@ -33,5 +33,14 @@ h1 {
 
 p{
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
+}
+
+#picks {
+    display: flex;
+    justify-content: center;
+}
+
+#picks > div {
+    padding: 0px 100px;
 }
