@@ -4,39 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="/script/rps.js"></script>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <main>
+      <h1>Choose One !</h1>
+      <div id="options">
+        <button data-key="0" class="key">Rock</button>
+        <button data-key="1" class="key">Paper</button>
+        <button data-key="2" class="key">Scissors</button>
+      </div>
+      <p>Computer's pick :</p>
+      <p id="pick">None</p>
+    </main>
     <script>
-      const options = ["Rock", "Paper", "Scissors"];
-      function computerPlay() {
-        const index = Math.floor(Math.random() * options.length);
-        return options[index];
-      }
+      const buttons = Array.from(document.querySelectorAll(".key"));
+      buttons.forEach((button) => button.addEventListener("click", playGame));
 
-      let getIndex = function (rps) {
-        const optionsLowercase = options.map((w) => w.toLowerCase());
-        return optionsLowercase.indexOf(rps.toLowerCase());
-      };
+      function playGame(e) {
+        const playerSelection = Number(this.getAttribute("data-key"));
+        const computerSelection = computerPlay();
+        const result = playRound(playerSelection, computerSelection);
 
-      function playRound(playerSelection, computerSelection) {
-        playerSelectionIndex = getIndex(playerSelection);
-        computerSelectionIndex = getIndex(computerSelection);
+        const h1Elem = document.querySelector("h1");
+        h1Elem.textContent = result;
 
-        if (playerSelectionIndex == computerSelectionIndex) {
-          return `Its a Draw!, you both picked ${options[playerSelectionIndex]}`;
-        } else if ((playerSelectionIndex + 1) % 3 == computerSelectionIndex) {
-          return `You Lose! ${options[computerSelectionIndex]} beats ${options[playerSelectionIndex]}`;
-        } else {
-          return `You Win! ${options[playerSelectionIndex]} beats ${options[computerSelectionIndex]}`;
-        }
-      }
-
-      function game() {
-        for (let i = 1; i <= 5; i++) {
-          const playerSelection = prompt("Select Rock, Paper, or Scissors");
-          const computerSelection = computerPlay();
-          console.log(playRound(playerSelection, computerSelection));
-        }
+        const optionsString = ["Rock", "Paper", "Scissors"];
+        const pElem = document.querySelector("#pick");
+        pElem.textContent = optionsString[computerSelection];
       }
     </script>
   </body>

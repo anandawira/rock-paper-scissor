@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bangers", cursive;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 100px;
+}
+
+#options {
+  display: flex;
+  padding: 50px;
+}
+
+#options button {
+  font-size: 80px;
+  flex-basis: 100%;
+  flex-grow: 1;
+  margin: 50px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+#options button:hover{
+    border-color: green;
+    color: green;
+}
+
+p{
+    text-align: center;
+    font-size: 50px;
+}
