@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock, Paper, Scissors!</title>
     <script src="./script/rps.js"></script>
     <link rel="stylesheet" href="./style/style.css" />
     <link
@@ -13,19 +13,28 @@
   </head>
   <body>
     <main>
-      <h1>Choose One !</h1>
-      <div id="options">
-        <button data-key="0" class="key">Rock</button>
-        <button data-key="1" class="key">Paper</button>
-        <button data-key="2" class="key">Scissors</button>
+      <h1>Choose One!</h1>
+      <div class="options">
+        <div class="option">
+          <img src="img/rock.png" />
+          <button data-key="0" class="key">Rock</button>
+        </div>
+        <div class="option">
+          <img src="img/paper.png" />
+          <button data-key="1" class="key">Paper</button>
+        </div>
+        <div class="option">
+          <img src="img/scissors.png" />
+          <button data-key="2" class="key">Scissors</button>
+        </div>
       </div>
-      <div id="picks">
+      <div class="picks">
         <div>
-          <p>Your pick :</p>
+          <p>Your pick:</p>
           <p id="playerPick">None</p>
         </div>
         <div>
-          <p>Computer's pick :</p>
+          <p>Computer's pick:</p>
           <p id="computerPick">None</p>
         </div>
       </div>
@@ -40,7 +49,14 @@
         const result = playRound(playerSelection, computerSelection);
 
         const h1Elem = document.querySelector("h1");
-        h1Elem.textContent = result;
+        h1Elem.textContent = result[0];
+        if (result[1] == 1) {
+          h1Elem.style.color = "green";
+        } else if (result[1] == 0) {
+          h1Elem.style.color = "red";
+        } else {
+          h1Elem.style.color = "black";
+        }
 
         const optionsString = ["Rock", "Paper", "Scissors"];
 
