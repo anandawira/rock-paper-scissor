@@ -1,3 +1,3 @@
-Simple Rock Paper Scissors game.
+# Simple Rock Paper Scissors game.
 
-Just choose your pick.
+### You can see the live preview [here](https://anandawira.github.io/rock-paper-scissor/).
