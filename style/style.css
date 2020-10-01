@@ -1,46 +1,77 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Bangers", cursive;
 }
 
 h1 {
   text-align: center;
-  padding-top: 100px;
-  font-size: 100px;
+  color: black;
+  padding-top: 50px;
+  font-size: 5vw;
 }
 
-#options {
+.options {
   display: flex;
-  padding: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2vw;
 }
 
-#options button {
-  font-size: 80px;
+.options button {
+  text-align: center;
+  font-size: 3vw;
   flex-basis: 100%;
   flex-grow: 1;
-  margin: 50px;
+  margin: 20px;
+  padding: 1.5vw;
   background-color: white;
-  border: 5px solid black;
+  border: 3px solid black;
   border-radius: 20px;
   transition: all 0.5s;
 }
 
-#options button:hover{
-    border-color: green;
-    color: green;
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5vw;
+  text-align: center;
 }
 
-p{
-    text-align: center;
-    font-size: 80px;
+.option > img {
+  width: 10vw;
+  margin: auto auto 0 auto;
 }
 
-#picks {
-    display: flex;
-    justify-content: center;
+.options button:hover {
+  border-color: green;
+  color: green;
 }
 
-#picks > div {
-    padding: 0px 100px;
+p {
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.picks {
+  display: flex;
+  justify-content: center;
+}
+
+.picks > div {
+  padding: 0px 100px;
+  margin: 20px;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .options {
+    flex-direction: column;
+  }
 }
