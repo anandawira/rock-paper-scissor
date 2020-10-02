@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="./script/rps.js"></script>
-    <link rel="stylesheet" href="./style/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
-      <h1>Choose One !</h1>
-      <div id="options">
-        <button data-key="0" class="key">Rock</button>
-        <button data-key="1" class="key">Paper</button>
-        <button data-key="2" class="key">Scissors</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock-Paper-Scissor</title>
+  <script src="./script/rps.js"></script>
+  <link rel="stylesheet" href="./style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main>
+    <h1>Choose One !</h1>
+    <div id="options">
+      <button data-key="0" class="key">Rock</button>
+      <button data-key="1" class="key">Paper</button>
+      <button data-key="2" class="key">Scissor</button>
+    </div>
+    <div id="picks">
+      <div>
+        <p>Your pick :</p>
+        <p id="playerPick">None</p>
       </div>
-      <div id="picks">
-        <div>
-          <p>Your pick :</p>
-          <p id="playerPick">None</p>
-        </div>
-        <div>
-          <p>Computer's pick :</p>
-          <p id="computerPick">None</p>
-        </div>
+      <div>
+        <p>Computer's pick :</p>
+        <p id="computerPick">None</p>
       </div>
-    </main>
-    <script>
-      const buttons = Array.from(document.querySelectorAll(".key"));
-      buttons.forEach((button) => button.addEventListener("click", playGame));
+    </div>
+  </main>
+  <script>
+    const buttons = Array.from(document.querySelectorAll(".key"));
+    buttons.forEach((button) => button.addEventListener("click", playGame));
 
-      function playGame(e) {
-        const playerSelection = Number(this.getAttribute("data-key"));
-        const computerSelection = computerPlay();
-        const result = playRound(playerSelection, computerSelection);
+    function playGame(e) {
+      const playerSelection = Number(this.getAttribute("data-key"));
+      const computerSelection = computerPlay();
+      const result = playRound(playerSelection, computerSelection);
 
-        const h1Elem = document.querySelector("h1");
-        h1Elem.textContent = result;
+      const h1Elem = document.querySelector("h1");
+      h1Elem.textContent = result;
 
-        const optionsString = ["Rock", "Paper", "Scissors"];
+      const optionsString = ["Rock", "Paper", "Scissors"];
 
-        const comElem = document.querySelector("#computerPick");
-        comElem.textContent = optionsString[computerSelection];
+      const comElem = document.querySelector("#computerPick");
+      comElem.textContent = optionsString[computerSelection];
 
-        const playerElem = document.querySelector("#playerPick");
-        playerElem.textContent = optionsString[playerSelection];
-      }
-    </script>
-  </body>
+      const playerElem = document.querySelector("#playerPick");
+      playerElem.textContent = optionsString[playerSelection];
+    }
+  </script>
+</body>
+
 </html>

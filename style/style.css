@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+
   font-family: "Bangers", cursive;
 }
 
@@ -12,7 +12,7 @@ h1 {
 
 #options {
   display: flex;
-  padding: 80px;
+  
 }
 
 #options button {
@@ -43,4 +43,55 @@ p{
 
 #picks > div {
     padding: 0px 100px;
+}
+@media only screen and (max-width: 600px) {
+  
+  h1 {
+    text-align: center;
+    padding: 10vh 5vh;
+    font-size: 10vw;
+  }
+  
+  #options {
+    
+    justify-items: center;
+    margin: 10% 2%;
+    padding: auto;
+    font-size: 10vh;
+  }
+  
+  #options button {
+    
+    justify-items: center;
+    font-size: 10vw;
+    margin: 10px 2px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    transition: all 0.5s;
+  }
+
+  .key{
+    justify-items: center;
+  }
+  
+  #options button:hover{
+      border-color: green;
+      color: green;
+  }
+  
+  p{
+      text-align: center;
+      font-size: 6vw;
+  }
+  
+  #picks {
+      display: flex;
+      justify-content: center;
+  }
+  
+  #picks > div {
+      padding: 0px 100px;
+  }
+
 }
