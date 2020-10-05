@@ -4,11 +4,14 @@
   box-sizing: border-box;
   font-family: "Bangers", cursive;
 }
+body {
+  background-color: black;
+}
 
 h1 {
   text-align: center;
   color: black;
-  padding-top: 50px;
+  padding-top: 30px;
   font-size: 5vw;
 }
 
@@ -16,7 +19,6 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 2vw;
 }
 
 .options button {
@@ -26,10 +28,11 @@ h1 {
   flex-grow: 1;
   margin: 20px;
   padding: 1.5vw;
-  background-color: white;
-  border: 3px solid black;
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
   border-radius: 20px;
-  transition: all 0.5s;
+  transition: all 0.2s;
   outline: none;
 }
 
@@ -37,8 +40,12 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5vw;
+  margin: 3vw;
   text-align: center;
+}
+
+.option button {
+  width: 200px;
 }
 
 .option > img {
@@ -59,6 +66,7 @@ p {
 .picks {
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 .picks > div {
