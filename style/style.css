@@ -44,6 +44,10 @@ h1 {
   text-align: center;
 }
 
+.option:hover{
+	transform: translateY(-10px);
+}
+
 .option button {
   width: 5em;
 }
