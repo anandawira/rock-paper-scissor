@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bangers", cursive;
+  font-family: 'Bangers', cursive;
 }
 body {
   background-color: black;
@@ -44,8 +44,8 @@ h1 {
   text-align: center;
 }
 
-.option:hover{
-	transform: translateY(-10px);
+.option:hover {
+  transform: translateY(-10px);
 }
 
 .option button {
@@ -69,22 +69,15 @@ p {
 
 .picks {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   color: white;
 }
 
 .picks > div {
-  padding: 0px 100px;
-  margin: 20px;
+  width: 15rem;
 }
 
 ::selection {
   background-color: black;
   color: white;
-}
-
-@media screen and (max-width: 500px) {
-  .options {
-    flex-direction: column;
-  }
 }
